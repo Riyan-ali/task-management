@@ -19,3 +19,15 @@
         color: $blue;
     }
 }
+
+@media (max-width: 500px) {
+    .image {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .image {
+        width: 20rem;
+    }
+}
