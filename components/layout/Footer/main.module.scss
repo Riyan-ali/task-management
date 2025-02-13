@@ -1,0 +1,51 @@
+// .wrapper {
+//     display: flex;
+//     justify-content: center;
+//     background-color: $dark-blue;
+// }
+
+// .container {
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+//     max-width: 1600px;
+
+//     p {
+//         color: $white;
+//         margin: 2rem 0.5rem;
+//         text-align: center;
+//     }
+// }
+
+
+
+// Apply this to your main layout container
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Ensure the layout takes full viewport height
+}
+
+// Make the main content expand to push the footer down
+.content {
+    flex-grow: 1; // Takes up remaining space
+}
+
+// Footer styles
+.wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: $dark-blue;
+    padding: 1rem 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    p {
+        color: $white;
+        margin: 2rem 0.5rem;
+        text-align: center;
+    }
+}

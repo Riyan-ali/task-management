@@ -1,0 +1,97 @@
+.backdrop {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.447);
+    overflow-y: scroll;
+    z-index: 999;
+}
+
+.card {
+
+    background-color: $white;
+    width: 50%;
+    max-width: 1400px;
+    height: fit-content;
+    margin: 7.5vh 0 0 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    
+
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $yellow;
+        }
+
+        .close {
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+
+            &:hover {
+                background-color: $light-grey;
+            }
+        }
+        
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                cursor: pointer;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 95%;
+    }
+}

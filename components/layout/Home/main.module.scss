@@ -1,0 +1,67 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.create {
+    width: 100%;
+    margin: 1rem 2rem;
+
+    button {
+        background-color: $blue;
+        color: $white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 0.5rem 0;
+    button {
+        margin: 0.5rem 0.25rem 1rem 0.25rem;
+        padding: 0.5rem 2rem;
+        border-radius: 0.25rem;
+    }
+
+    .reset {
+        border: 1px solid $blue;
+        background-color: transparent;
+        color: $blue;
+        cursor: pointer;
+    }
+
+    .submit {
+        background-color: $blue;
+        color: $white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s ease-in;
+
+        &:hover {
+            background-color: $dark-blue;
+        }
+    }
+}
+
+.info {
+    margin: 0.5rem 0;
+    color: $blue;
+}
+
+
+@media (max-width: 550px) {
+    .create {
+        display: flex;
+        justify-content: center;
+    }
+}

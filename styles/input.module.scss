@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+
+    label {
+        font-size: 1.1rem;
+        color: $dark-blue;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #6c757d;
+    }
+
+    textarea {
+        height: 7rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #6c757d;
+        resize: none;
+    }
+
+    select {
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #6c757d;
+    }
+
+    .errorInput {
+        border: 1px solid $error;
+    }
+
+    span {
+        color: $error;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,63 @@
+.card {
+    box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+}
+
+.password {
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+        width: fit-content;
+        margin: 0.5rem 1rem;
+        cursor: pointer;
+        color: $blue;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 100%;
+        margin: 0.5rem 0.25rem 1rem 0.25rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .reset {
+        border: 1px solid $yellow;
+        background-color: transparent;
+        color: $yellow;
+        cursor: pointer;
+    }
+
+    .submit {
+        background-color: $yellow;
+        color: $white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+.error {
+    color: $error;
+    margin: 0 0 0.5rem 0;
+}
+
+.switch {
+    text-align: center;
+    margin-bottom: 1rem;
+
+    span {
+        color: $blue;
+
+        &:hover {
+            color: $light-blue;
+            text-decoration: underline;
+        }
+    }
+}
