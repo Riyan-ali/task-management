@@ -26,6 +26,7 @@ const Profile = () => {
   }, [session, user]);
 
   return (
+    <>
     <div className={styles.profile}>
       <LogoutButton />
       <span className={nunito.className}>
@@ -33,6 +34,7 @@ const Profile = () => {
         {user ? `Hello, ${user.firstName}` : "Profile"}
       </span>
     </div>
+    </>
   );
 };
 

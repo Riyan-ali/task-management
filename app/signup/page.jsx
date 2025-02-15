@@ -2,6 +2,11 @@ import RegisterForm from "@/components/layout/Signup/Main"
 import styles from "./main.module.scss"
 import { dmsans } from "@/app/fonts/font"
 
+export const metadata = {
+    title: "Register Yourself",
+    description: "Manage your daily tasks like a pro!",
+  };
+
 export default function Signup() {
     return (
         <div className={styles.wrapper}>

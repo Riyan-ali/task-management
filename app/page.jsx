@@ -6,6 +6,11 @@ import Main from "@/components/layout/Home/Main";
 import NotLoggedIn from "@/components/layout/Empty/NotLoggedIn";
 import Profile from "@/components/layout/Profile/Main";
 
+export const metadata = {
+  title: "Task Management - Riyan Ali",
+  description: "Manage your daily tasks like a pro!",
+};
+
 export default async function Home() {
   const session = await getServerSession();
 

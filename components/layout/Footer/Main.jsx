@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.wrapper}>
         <div className={styles.container}>
-            <p className={domine.className}>This is design and developed by <Link href={"https://www.linkedin.com/in/riyan-ali-1445951b8/"} target="_blank">Riyan Ali</Link></p>
+            <p className={domine.className}>This is designed and developed by <Link href={"https://www.linkedin.com/in/riyan-ali-1445951b8/"} target="_blank">Riyan Ali</Link></p>
         </div>
     </div>
   )

@@ -72,18 +72,22 @@ const TaskList = ({ onEdit, refresh, setRefresh }) => {
 
   useEffect(() => {
     if (!tasks.length) return;
-  
+
     let updatedTasks = [...tasks];
-  
+
     if (selectedStatus !== "All") {
-      updatedTasks = updatedTasks.filter(task => task.status === selectedStatus);
+      updatedTasks = updatedTasks.filter(
+        (task) => task.status === selectedStatus
+      );
     }
     if (selectedPriority !== "All") {
-      updatedTasks = updatedTasks.filter(task => task.priority === selectedPriority);
+      updatedTasks = updatedTasks.filter(
+        (task) => task.priority === selectedPriority
+      );
     }
     if (selectedDueDate !== "All") {
       const now = new Date();
-      updatedTasks = updatedTasks.filter(task => {
+      updatedTasks = updatedTasks.filter((task) => {
         const taskDate = new Date(task.dueDate);
         if (selectedDueDate === "Today") {
           return taskDate.toDateString() === now.toDateString();
@@ -92,17 +96,17 @@ const TaskList = ({ onEdit, refresh, setRefresh }) => {
           const startOfWeek = new Date(now);
           startOfWeek.setDate(now.getDate() - now.getDay()); // Get Sunday of this week
           startOfWeek.setHours(0, 0, 0, 0);
-  
+
           const endOfWeek = new Date(startOfWeek);
           endOfWeek.setDate(startOfWeek.getDate() + 6); // Get Saturday of this week
           endOfWeek.setHours(23, 59, 59, 999);
-  
+
           return taskDate >= startOfWeek && taskDate <= endOfWeek;
         }
         return true;
       });
     }
-  
+
     setFilteredTasks(updatedTasks);
   }, [selectedStatus, selectedPriority, selectedDueDate, tasks]);
 
@@ -257,7 +261,6 @@ const TaskList = ({ onEdit, refresh, setRefresh }) => {
                 <option value="This Week">This Week</option>
               </select>
             </span>
-
           </div>
           <Paper sx={{ width: "100%", overflow: "hidden" }}>
             <TableContainer>
@@ -267,7 +270,15 @@ const TaskList = ({ onEdit, refresh, setRefresh }) => {
                     {["title", "dueDate", "status", "priority"].map(
                       (column) => (
                         <TableCell key={column}>
-                          <TableSortLabel onClick={() => handleSort(column)}>
+                          <TableSortLabel
+                            active={sortConfig.key === column}
+                            direction={
+                              sortConfig.key === column
+                                ? sortConfig.direction
+                                : "asc"
+                            }
+                            onClick={() => handleSort(column)}
+                          >
                             {column.charAt(0).toUpperCase() + column.slice(1)}
                           </TableSortLabel>
                         </TableCell>
@@ -330,14 +341,14 @@ const TaskList = ({ onEdit, refresh, setRefresh }) => {
               </Table>
             </TableContainer>
             <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={tasks.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
+              rowsPerPageOptions={[5, 10, 25]}
+              component="div"
+              count={tasks.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+            />
           </Paper>
         </Box>
       </div>
